@@ -8,7 +8,7 @@ public class SolveTowers {
 		long slutt;
 		start = System.currentTimeMillis();
 
-		TowersOfHanoi towers = new TowersOfHanoi(20);
+		TowersOfHanoi towers = new TowersOfHanoi(21);
 		towers.solve();
 		towers.trekk();
 
@@ -21,7 +21,6 @@ public class SolveTowers {
 		} else {
 			tid = tid / 1000;
 			System.out.print("\nTidsbruk i sekunder " + tid);
-
 		}
 		// Tester tid med minder tall pga tid de tar
 		// velger n = 20 gir tid ca. 7-8 sek
