@@ -183,7 +183,7 @@ public class Sorteringsmetoder {
 		// Integer[] tab = { 7, 3, 1, 9, 2, 4, 10, 12, 30 };
 
 		// Velg antall element som skal sorteres
-		int n = 128000;
+		int n = 32000;
 
 		
 		int resultat = 0;
@@ -203,21 +203,24 @@ public class Sorteringsmetoder {
 			Random tall = new Random();
 			int teller = 0;
 			
+			
 			for (int j = 0; j < n; j++) {
-				tab[j] = tall.nextInt(2000);
+				
+				tab[j] = tall.nextInt(20000);
+//				
 				teller++;
 			}
 			start = System.currentTimeMillis();
 			// utvalgsSortering(tab);
 			// sorteringVedInnsetting(tab);
 			// bobleSortering(tab);
-			   fletteSort(tab, 0, tab.length - 1);
-			// kvikkSort(tab, 0, tab.length - 1);
+			// fletteSort(tab, 0, tab.length - 1);
+			 kvikkSort(tab, 0, tab.length - 1);
 			test++;
 			slutt = System.currentTimeMillis();
 
 			for (Integer e : tab) {
-				// System.out.print(e + " ");
+			//	 System.out.print(e + " ");
 			}
 
 			long tid = (slutt - start);
